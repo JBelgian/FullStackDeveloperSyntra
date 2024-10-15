@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Extra oefening Form</title>
+    </head>
+    <body>
+        <table>
+           <tr>
+                <td>Date: <input type="date"></td>
+                <td><u>To be filled up by TSG personnel</u></td>
+           </tr>
+           <tr>
+                <td>Reference No: __/*auto increment*/__ </td>
+                <td>Received By: <input type="text"></td>
+           </tr>
+           <tr>
+                <td>Employee Name: <input type="text"></td>
+                <td>Date: <input type="date"></td>
+           </tr>
+           <tr>
+                <td>Employee No: <input type="number"></td>
+                <td>Computer Name: <input type="text"></td>
+           </tr>
+           <tr>
+                <td>Contact No: <input type="number"></td>
+                <td>Assigned To: <input type="text"></td>
+           </tr>
+           <tr>
+                <td rowspan="3">Issue Description: 
+                    <p><textarea></textarea></p>
+                </td>
+                <td>Date: <input type="date"></td>
+           </tr>
+           <tr>
+                <td>IP Address (optional) <input type="text"></td>
+           </tr>
+           <tr>
+                <td><b>Item Pulled Out?</b> YES <input type="radio" name="ipo">
+                    NO <input type="radio" name="ipo"></td>
+           </tr>
+           <tr>
+                <td>Location: <input type="text"></td>
+                <td>Items: <input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Save"></td>
+                <td>Status: 
+                    <select>
+                        <option value="1"></option>
+                        <option value="2"> Optie 1</option>
+                        <option value="3"> Optie 2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Save"></td>
+            </tr>
+        </table>
+        <hr>
+        <p>(NOTES AREA)</p>
+        <span><button>ADD</button> <button>UNDO</button></span>
+        <table border="1">
+            <tr>
+                <th><b>Date/Time Added</b></th>
+                <th><b>Description</b></th>
+            </tr>
+            <tr>
+                <td><input type="datetime-local"></td>
+                <td><textarea></textarea></td>
+            </tr>
+        </table>
+    </body>
+</html>
