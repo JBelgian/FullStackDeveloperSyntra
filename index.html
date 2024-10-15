@@ -1,0 +1,123 @@
+<html> 
+        <!-- This is a comment --> 
+        <!-- ctrl + k + c zorgt ervoor dat ge snel comment aanmaakt -->
+    <head> 
+        <meta charset="UTF-8">
+        <title>HTML Page</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">    
+    </head> 
+    <body>
+        <!-- A sticky navigation bar to jump to different section on the page -->
+        <div class="navigation">
+            <a href="#home"> Home</a>
+            <a href="#tables"> Tabelen</a>
+            <a href="#input"> Input types</a>
+        </div>
+        <h1 id="head">Hello World</h1>
+        <div>
+            <!-- block -->
+            <p>Hello</p>
+            <p>World</p>
+
+            <!-- make a horizontal rule -->
+            <hr>
+
+            <!-- inline -->
+            <span>Hello</span>
+            <span>World</span>
+        
+            
+            <!-- basic markup and styling -->
+             <p><b>Lorem Ipsum</b> <i>is simply dummy text of the printing and typesetting industry.</i> <strong>Lorem Ipsum</strong> has been the industry's standard dummy text ever since the 1500s.</p>
+
+            <!-- links met Target="_blank" opent de link in een nieuw tabblad -->
+            <a href="https://syntrapxl.be" target="_blank"><b>SyntraPXL</b></a>
+            <a href="index.html">Home</a>
+
+            <!-- images local and external -->
+            <!-- local the file sits in the same folder -->
+             <img src="same.jpeg" width="10%" alt="hween img">
+
+            <!-- the file is in a different folder -->
+            <img src="images/different.jpg" width="200px" alt="placeholder">
+
+            <!-- file is in a external location -->
+            <img src="https://via.placeholder.com/250" alt="placeholder">
+
+
+            <!-- ordered and unordered lists -->
+             <ol>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+             </ol>
+
+             <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+             </ul>
+
+             <!-- tables -->
+              <h1 id="tables"></h1>
+              <table>
+                <tr>
+                    <th colspan="2">Column_merge</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td>Item 1</td>
+                    <td>Item 2</td>
+                    <td>Item 3</td>
+                </tr>
+                <tr>
+                    <td>Item 4</td>
+                    <td>Item 5</td>
+                    <td>Item 6</td>
+                </tr>
+                <tr>
+                    <td>Item 7</td>
+                    <td>Item 8</td>
+                    <td rowspan="2">Row_merge</td>
+                </tr>
+                <tr>
+                    <td>Item 10</td>
+                    <td>Item 11</td>
+                </tr>
+              </table>
+              <hr>
+
+              <h2 id="input"><u>Input Types</u></h2>
+              <!-- values of inputs are optional and can be left blank -->
+              <p>tekst <input type="text" value="Hier typen!"></p>
+              <p>password <input type="password" value="Hier staat een paswoord"></p>
+              <p>email <input type="email" value="JH@syntrapxl.be"></p>
+              <p>file <input type="file"></p>
+              <p>nummers <input type="number"></p>
+              <!-- Choose input type number with steps and min and max value -->
+              <p>Nummers met min, max en steps <input type="number" min="0" max="10" step="2"></p>
+              <p>Slider <input type="range"></p>
+              <p>Datum <input type="date"></p>
+              <p>Datum tijd <input type="datetime-local"></p>
+              <p>Radio button <input type="radio" name="package"> delivery
+                <input type="radio" name="package"> pickup</p>
+              <p>Check box <input type="checkbox" name="saus"> Mayo 
+                <input type="checkbox" name="saus"> Ketchup 
+                <input type="checkbox" name="saus"> Yoppie</p>
+
+                <select>
+                    <option value="1"> Optie 1</option>
+                    <option value="2"> Optie 2</option>
+                </select>
+
+                <p><textarea>
+                    Lorem ipsum
+                </textarea></p>
+                <p><input type="submit"></p>
+                <p><input type="reset"></p>
+
+        </div>
+    <script src="index.js"></script>
+    </body> 
+</html> 
