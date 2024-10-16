@@ -3,33 +3,35 @@
         <title>Halloween Tocht Form</title>
     </head>
     <body>
-        <table border="1">
-            <tr>
-                <td rowspan="3"><img src="images/pumpkin.jpg" alt="Pompoenfoto" width="300px"></td>
-                <td>Naam <input type="text"></td>
-                <td>Voornaam <input type="text"></td>
-            </tr>
-            <tr>
-                <td>Email <input type="email"></td>
-                <td>Phone <input type="text"></td>
-            </tr>
-            <tr>
-                <td>Aantal <input type="number" min="0"></td>
-                <td>Tijdslot <input type="radio" name="uur"> 20:00 (Kids)
-                    <input type="radio" name="uur"> 21:00 </td>
-            </tr>
-            <tr>
-                <td height="100"></td>
-                <td colspan="2">Snack keuze: <input type="checkbox" name="eten"> Soep
-                    <input type="checkbox" name="eten"> Broodje
-                    <input type="checkbox" name="eten"> Jenever
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="tnc"> Algemene voorwaarden disclaimer</td>
-                <td></td>
-                <td><input type="submit"> </td>
-            </tr>
-        </table>
+        <form>
+            <table border="1">
+                <tr>
+                    <td rowspan="3"><img src="images/pumpkin.jpg" alt="Pompoenfoto" width="300px"></td>
+                    <td>Naam <input type="text" required></td>
+                    <td>Voornaam <input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Email <input type="email" required></td>
+                    <td>Phone <input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Aantal <input type="number" min="0"></td>
+                    <td>Tijdslot <input type="radio" name="uur"> 20:00 (Kids)
+                        <input type="radio" name="uur"> 21:00 </td>
+                </tr>
+                <tr>
+                    <td height="100"></td>
+                    <td colspan="2">Snack keuze: <input type="checkbox" name="eten"> Soep
+                        <input type="checkbox" name="eten"> Broodje
+                        <input type="checkbox" name="eten"> Jenever
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="tnc"> Algemene voorwaarden disclaimer</td>
+                    <td></td>
+                    <td><input type="submit"> </td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>
