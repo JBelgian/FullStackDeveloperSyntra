@@ -1,0 +1,31 @@
+<script>
+    // Variables
+    let score = 0;
+    let name = '';
+    let counter = 0;
+    let questions = ["What is 2 + 2?", "What is the capital of Belgium?"];
+    let answers = [4, "Brussels"];
+     
+    // Function to ask a question
+    function askQuestion() {
+        name = prompt("What's your name?");
+        alert("Hello " + name + "!");
+        for (counter = 0; counter < questions.length; counter++) {
+            let answer = prompt(questions[counter]);
+            if (answer == answers[counter]) {
+                score += 1;
+                alert("Correct!");
+                // Play a sound (coin sound logic can be handled here)
+            } else {
+                alert("Wrong! The correct answer is " + answers[counter]);
+                // Play a sound (wrong answer sound logic can be handled here)
+            }
+        }
+     
+        // Final score output
+        alert("Your score is: " + score + " out of " + questions.length);
+    }
+     
+    // Trigger the quiz when the script runs
+    askQuestion();
+    </script>
