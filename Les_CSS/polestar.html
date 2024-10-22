@@ -32,13 +32,15 @@
             border: 1 solid black;
             background-image: url(images/plasma.png);
             background-repeat: no-repeat;
+            border: 1px solid black;
+            color: white;
         }
 
         .rightBox {
             float: right;
             width: 40%;
             margin-right: 30px;
-            border: 1 solid black;
+            border: 1px solid black;
             color: white;
         }
 
@@ -59,6 +61,14 @@
         .minitekst {
             font-size: 0.5em;
         }
+
+        .tealfont {
+            color: teal;
+        }
+
+        .grotetekst {
+            font-size: 2em;
+        }
     </style>
 </head>
 <body>
@@ -73,11 +83,11 @@
     </div>
     <div class="clear"></div>
     <div class="leftBox">
-        <span>0-100</span><span>3.6s</span>
+        <p><span>0-100</span><span>3.6s</span></p>
         <img src="images/car.png" alt="auto">
     </div>
     <div class="rightBox">
-        <p><span>PreOrder</span><span>Polestar</span><span></span>6</span></p>
+        <p><span>PreOrder</span><span>Polestar</span><span></span class="tealfont grotetekst">6</span></p>
         <br>
         <p>Uw volledige naam</p>
         <input type="text">
