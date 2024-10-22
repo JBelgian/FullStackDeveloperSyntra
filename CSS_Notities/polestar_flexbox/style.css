@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Sets the default font for the entire page */
+    background: #ad5389; /* Fallback solid color for browsers that don't support gradients */
+    /* The following three lines create a gradient background */
+    background: -webkit-linear-gradient(to right, #37516A, #8FBED4); /* For older WebKit browsers */
+    background: linear-gradient(to right, #37516A, #8FBED4); /* Standard syntax for modern browsers */
+    /* see https://cssgradient.io/ */
+}
+
+img.logo {
+    width: 100px; /* Sets the logo width to 100 pixels */
+    margin-top: 8px; /* Adds space above the logo */
+    margin-left: 0px; /* Ensures no left margin */
+    margin-bottom: 5px; /* Adds a small space below the logo */
+}
+
+/* The difference between img.logo and .logo in CSS selectors relates to specificity and targeting. Let's break this down:
+1. img.logo selector:
+This targets only <img> elements that have the class "logo".
+It's more specific, as it combines an element selector (img) with a class selector (.logo).
+.logo selector:
+This targets any element that has the class "logo", regardless of the HTML tag.
+It's less specific, as it only uses a class selector. */
+
+.navigation {
+    display: flex; /* Uses flexbox for the navigation layout */
+    align-items: center; /* Vertically centers the navigation items */
+}
+
+a.navitem {
+    color: white; /* Sets the text color of navigation items to white */
+    text-decoration: none; /* Removes the underline from links */
+    margin-right: 54px; /* Adds space to the right of each navigation item */
+    font-weight: 300; /* Sets a light font weight */
+    font-size: 18px; /* Sets the font size for navigation items */
+}
+
+hr.clear {
+    border-style: dashed; /* Creates a dashed horizontal line */
+    margin-bottom: 22px; /* Adds space below the line */
+    border-color: #ffffff0a; /* Sets a very light, semi-transparent white color for the line */
+    border-width: thin; /* Makes the line thin */
+}
+
+span.speed {
+    color: #80acc2; /* Sets the text color for the 'speed' class */
+}
+
+span.speednum {
+    color: white; /* Sets the text color to white */
+    font-size: 33px; /* Increases the font size */
+}
+
+h1 {
+    color: white; /* Sets the heading color to white */
+    font-weight: 100; /* Sets a very light font weight for the heading */
+    margin-top: -12px; /* Moves the heading up slightly */
+}
+
+span.fat {
+    font-weight: 600; /* Sets a bold font weight */
+}
+
+span.two {
+    font-weight: 900; /* Sets an extra bold font weight */
+    font-size: 46px; /* Increases the font size significantly */
+    color: #ffffff38; /* Sets a semi-transparent white color */
+}
+
+label {
+    display: block; /* Makes labels block-level elements */
+    font-weight: 300; /* Sets a light font weight */
+    color: white; /* Sets the text color to white */
+    padding-bottom: 5px; /* Adds space below the label */
+    padding-top: 20px; /* Adds space above the label */
+}
+
+button {
+    background-color: #446179; /* Sets the button background color */
+    display: block; /* Makes the button a block-level element */
+    margin-top: 20px; /* Adds space above the button */
+    border: none; /* Removes the button border */
+    padding: 18px; /* Adds internal spacing in the button */
+    color: white; /* Sets the button text color to white */
+    border-radius: 4px; /* Slightly rounds the button corners */
+}
+
+input {
+    display: block; /* Makes inputs block-level elements */
+    width: 408px; /* Sets a fixed width for inputs */
+    padding: 12px; /* Adds internal spacing in inputs */
+    border-radius: 4px; /* Slightly rounds input corners */
+    border: none; /* Removes the input border */
+}
+
+.small {
+    font-size: 10px; /* Sets a very small font size */
+    color: #ffffffa6; /* Sets a semi-transparent white color */
+    margin-top: 20px; /* Adds space above the element */
+    text-align: justify; /* Justifies the text for even spacing */
+    line-height: 14px; /* Sets the line height for readability */
+}
+
+.header {
+    display: flex; /* Sets the header to use flexbox layout */
+    justify-content: space-between; /* Distributes space between flex items, pushing them to the edges */
+    align-items: center; /* Vertically centers the flex items within the header */
+    margin: 0 auto; /* Centers the header horizontally within its parent */
+    width: 80%; /* Sets the header width to 80% of its parent container */
+}
+
+/* The 80% width creates margins on both sides of the header, giving it some breathing room from the edges of the screen. */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    gap: 40px;
+
+    max-width: 1200px; /* IN CASE OF LARGE SCREENS */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* 
+display: flex;
+This sets the container to use flexbox layout, which is a powerful way to distribute space and align content in a container.
+flex-wrap: wrap;
+This allows flex items to wrap onto multiple lines if there isn't enough space on one line. Without this, flex items would try to fit on a single line, potentially shrinking or overflowing.
+justify-content: space-between;
+This distributes the flex items evenly along the main axis (horizontally in this case). The first item is flush with the start, the last is flush with the end, and the remaining space is distributed evenly between the items.
+4. margin: 0 auto;
+This centers the content container horizontally within its parent. It sets top and bottom margins to 0, and left and right margins to auto, which evenly distributes available space on the sides.
+width: 80%;
+This sets the width of the content container to 80% of its parent container's width, leaving some space on the sides.
+6. gap: 20px;
+This creates a 20-pixel gap between flex items, both horizontally and vertically. It's a shorthand for both row-gap and column-gap. */
+
+.leftpane {
+    flex: 0 0 400px; /* Shorthand for flex-grow: 0, flex-shrink: 0, flex-basis: 400px. This keeps the width fixed at 400px */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: top; /* Aligns the background image to the top of the element */
+    background-size: 500px; /* Sets the size of the background image to 500px width (height will scale proportionally) */
+    background-image: url('plasma.png'); /* Sets the background image */
+}
+
+.rightpane {
+    /* flex: 1;  This would allow it to grow and take remaining space (commented out) */
+    flex: 0 0 400px; /* Like leftpane, this keeps the width fixed at 400px */
+    background-color: #ffffff14; /* Sets a semi-transparent white background color */
+    border-radius: 16px; /* Rounds the corners of the element */
+    padding: 45px; /* Adds 45px of space inside the element on all sides */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); /* Adds a subtle shadow effect */
+}

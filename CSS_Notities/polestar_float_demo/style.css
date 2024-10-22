@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+  
+   font-family: 'Roboto', sans-serif;
+   background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #37516A, #8FBED4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #37516A, #8FBED4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.logo {
+    float: left;
+
+}
+
+.clear {
+    clear: both;
+}
+
+img.logo {
+    width: 100px;
+    margin-top: 8px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+.navigation {
+    float: right;
+    margin-top: 44px;
+    margin-right: 40px;
+}
+
+a.navitem {
+    color: white;
+    text-decoration: none;
+    margin-right: 54px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.leftpane {
+    float: left;
+    height: 600px;
+    width: 400px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    
+    margin-right: 180px;
+    background-image: url('plasma.png');
+
+}
+
+
+
+hr.clear {
+   
+    border-style: dashed;
+    margin-bottom: 22px;
+    border-color: #ffffff0a;
+    border-width: thin;
+   
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+}
+
+span.speed {
+    color: #80acc2;;
+}
+
+span.speednum {
+    color: white;
+    font-size: 33px;
+}
+
+.rightpane {
+    float: left;
+    height: 400px;
+    width: 450px;
+    background-color: #ffffff14;
+    border-radius: 16px;
+    padding: 45px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+h1 {
+    color: white;
+    font-weight: 100;
+    margin-top: -12px;
+}
+
+span.fat {
+    font-weight: 600;
+}
+
+span.two {
+    font-weight: 900;
+    font-size: 46px;
+    color: #ffffff38;
+}
+label {
+    display: block;
+    font-weight: 300;
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+button {
+    background-color: #446179;
+    display: block;
+    margin-top: 20px;
+    border: none;
+    padding: 18px;
+    color: white;
+    border-radius: 4px;
+}
+
+input {
+    display: block;
+    width: 408px;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.small {
+    font-size: 10px;
+    color: #ffffffa6;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 14px;
+}
