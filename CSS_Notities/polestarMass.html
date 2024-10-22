@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            background: rgb(11,11,42);
+            background: linear-gradient(90deg, rgba(11,11,42,1) 16%, rgba(167,199,205,1) 100%);
+        }
+
+        hr {
+            /* make transparent */
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.24);
+            height: 1px;
+            width: 90%;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .navigation {
+            float: right;
+            margin-top: 44px;
+            margin-right: 40px;
+        }
+        
+        .navitem {
+            color: white;
+            font-weight: 100;
+            text-decoration: none;
+            margin-right: 60px;
+        }
+
+        .speednum {
+            color: teal;
+            font-size: 2em;
+        }
+
+        .box {
+            float: left;
+            height: 400px;
+            width: 450px;
+            border-radius: 16px;
+            padding: 45px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        .splash {
+            background-image: url(images/plasma.png);
+            background-repeat: no-repeat;
+        }
+
+        .shadow {
+            box-shadow: 0 3px 10px black;
+        }
+
+        input {
+            display: block;
+            width: 90%;
+            height: 2em;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: rgb(18, 18, 54);
+            color: white;
+            width: 100%;
+            height: 2em;
+            border-radius: 5px;
+        }
+
+        .smallfont {
+            font-size: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/polestarlogo.png" alt="logo" width="100px">
+        </div>
+        <div class="navigation">
+            <a class="navitem" href="index.html">PreOrder</a>
+            <a class="navitem" href="about.html">Specs</a>
+            <a class="navitem" href="playground.html">FAQ</a>
+            <a class="navitem" href="contact.html">Contact</a>
+        </div>
+    </div>
+    <hr class="clear">
+    <div class="box splash">
+        <span class="speed">0-100</span><span class="speednum">3.6s</span>
+        <img src="images/car.png" alt="car">
+        <h2>Do not bother, you will lose that stoplight sprint</h2>
+    </div>
+    <div class="box shadow">
+        <span>PreOrder</span><span>Polestar</span><span class="speednum">6</span>
+        <br>
+        <p>Uw volledige voornaam</p>
+        <input type="text">
+        <p>Uw email adres</p>
+        <input type="email">
+        <p>
+            <button>JA, IK WIL DIE VETTE AUTO MET DRONE</button>
+        </p>
+        <p class="smallfont">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+</body>
+</html>
