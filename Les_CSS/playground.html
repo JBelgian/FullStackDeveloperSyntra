@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+        body {
+          background-image: url("https://img.freepik.com/premium-photo/grainy-gradient-background-red-white-blue-colors-with-soft-faded-watercolor-border-texture_927344-24167.jpg");
+          background-size: cover;
+          background-attachment: fixed;
+        }
+ 
+        h1 {
+           font-size: 60px;
+           font-family: 'Courier New', Courier, monospace;
+ 
+        }
+ 
+ 
+        .bigandbold {
+            font-size: 2em;
+            font-weight: bold;
+        }
+ 
+        .important {
+            background-color: #25a57a;
+            text-decoration: underline;
+            
+        }
+ 
+        .important:hover {
+            background-color: #cc0000;
+            
+ 
+        }
+ 
+        .custominput:focus {
+          background-color: yellowgreen;
+        }
+ 
+        .borderpaddingmargin {
+            float: left;
+            width: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+ 
+        .footer {
+            clear: both;
+        }
+ 
+        /* Most import css syntax */
+ 
+        .example {
+            color: #cc0000;
+            background-color: #25a57a;
+            font-size: 2em;
+ 
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="hello">hello</h1>
+        <p class="bigandbold important">Lorem ipsum dolor sit amet.</p>
+    </div>
+    
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet.  </p>
+        <!-- p class with an input field -->
+        <p><input class ="custominput" type="text"></p>
+        <div class="borderpaddingmargin">
+            <p class="important">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="borderpaddingmargin">
+            <p class="important">Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+ 
+    <div class="footer">
+        <p>&#128514 Contactgegevens</p>
+    </div>
+</body>
+</html>
