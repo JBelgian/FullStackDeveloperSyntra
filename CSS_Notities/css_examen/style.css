@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: url(images/CodeImage.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 100px;
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    float: left;
+    height: 90px;
+    margin-left: 80px;
+}
+
+.navigation {
+    float: right;
+    background: white;
+    margin-top: 20px;
+    margin-right: 80px;
+}
+
+.navitem {
+    color: rgb(59, 59, 59);
+    font-weight: 200;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.navitem:hover {
+    color: orange; /* turns nav menu's orange when hover over */
+}
+
+hr.clear { /* invisible line which clears previous float settings */
+    border: transparent;
+    clear: both;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 110px; /* ensure the panels start below the navmenu ribbon */
+    justify-content: center; /* displays the panels in the middle of the screen */
+    align-items: center; /* displays the panels in the middle of the screen */
+}
+
+.pane { 
+    width: 200px; /* Sets the panel width to 200px */
+    padding: 20px; /* aligns the text 20px from the panel borders */
+}
+
+.pane:hover {
+    background-color: orange; /* turns panels orange when hover over */
+}
+
+.donkergrijs { /* panel background color */
+    background-color: grey;
+}
+
+.lichtgrijs { /* panel background color */
+    background-color: lightgray;
+}
+
+.blauw { /* panel background color */
+    background-color: rgb(44, 44, 122);
+}
+
+.lichtblauw { /* panel background color */
+    background-color: lightblue;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 1000;
+    margin: 0px;
+}
