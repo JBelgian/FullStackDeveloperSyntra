@@ -1,0 +1,19 @@
+.container {
+    border: 1px solid black;
+}
+
+.container-fluid {
+    border: 1px solid black;
+}
+
+.row {
+    border: 1px solid red;
+}
+
+.col {
+    border: 1px solid blue;
+}
+
+h1 {
+   color: red;
+}
