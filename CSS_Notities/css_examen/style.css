@@ -8,12 +8,7 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    height: 100px;
-    margin: 0 auto;
+    background-color: white;
     width: 100%;
     position: fixed;
     top: 0;
@@ -29,7 +24,6 @@ body {
 
 .navigation {
     float: right;
-    background: white;
     margin-top: 20px;
     margin-right: 80px;
 }

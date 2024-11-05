@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function testPerformance() {
+        const targetNumber = 100000000;
+        const startTime = performance.now();
+
+        for (let i = 0; i < targetNumber; i++) {
+
+        }
+
+        const endTime = performance.now();
+        const elapsedTime = endTime - startTime;
+
+        document.body.innerHTML = `
+        <h1>Performance Test Result</h1>
+        <p>Counting to ${targetNumber} took <strong>${elapsedTime.toFixed(2)}</strong> milliseconds</p>
+    `;
+    }
+        testPerformance()
+</script>
+</html>
