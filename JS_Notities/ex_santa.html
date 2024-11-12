@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // Oefening 1
+        // Complete this arrow function that takes a child's name and number of gifts
+        // and returns a festive message. Use template literals!
+        // Example output: "Ho ho ho! Maria has been good and gets 5 presents!"
+
+        const santaMessage = (name, numGift) => {
+            console.log(`Ho ho ho! ${name} has been good and gets ${numGift} presents!`);
+        }
+        santaMessage("Maria", 5);
+
+        // Oefening 2
+        // Fix the scope issues in this code so the elves can track their toy production
+        function trackToyProduction() {
+            var totalToys = 100;
+            if(true) {
+                // var totalToys = 50;  This is causing issues! --> var has already been declared, cannot be declared again
+                let dailyToys = 10;                
+            }
+            console.log(totalToys);  // Should print 100, not 50
+            //console.log(dailyToys);  // Should cause an error - why? --> let determined within the if statement doesn't come out
+        }
+
+        trackToyProduction()
+
+        // Oefening 3
+        // Write an ES6 arrow function to schedule reindeer feeding times
+        // The function should take the number of reindeer and return an array of feeding times
+        const feedReindeer =  (numReindeer) => {
+            for (let i = 1; i <= numReindeer; i++) {
+                console.log(`Reindeer ${i} feeding time: 8am`);
+            }
+        }
+        feedReindeer(3);
+
+
+        // Oefening 4
+        /* Create a comprehensive gift management system that combines:
+            1. Arrow functions for gift processing
+            2. Proper scope management with let/const
+
+            Requirements:
+            - Create an arrow function that adds gifts to a child's list
+            - Use block scope to manage different gift categories (toys, books, clothes)
+            - Handle cases where:
+            * Gift weight exceeds sleigh capacity (>25kg)
+            * Child's name is not on the nice list
+            * Invalid gift category
+        */
+
+        const niceList = ["John", "Jef", "Nick", "Sarah"];
+        const giftCategories = ["toys", "books", "clothes"];
+        const maxWeight = 25;
+        const giftList = [];
+        const addGift = (childName, giftCat, giftWeight, giftName) => {
+            if (niceList.includes(childName)) {
+                if (giftCategories.includes(giftCat)) {
+                    if (giftWeight <= maxWeight) {
+                        giftList.push({childName, giftCat, giftWeight, giftName});
+                        console.log(`${giftName} has been added to the gift list for ${childName}`)
+                    }
+                    else console.log(`${giftName} is too heavy`)
+                }
+                else console.log(`Category ${giftCat} does not exist`)
+            }
+            else console.log(`${childName} has been naughty`)
+        }
+
+        addGift("John", "books", 1.5, "Eragon");
+        addGift("Nick", "toys", 26, "Train");
+        addGift("Dorien", "books", 1.5, "Harry Potter");
+        addGift("Sarah", "clothes", 0.8, "Shoes");
+        console.log(giftList);
+
+
+        // Oefening 5
+        /* Build an elf workshop simulator that:
+            1. Uses arrow functions for each production stage
+            2. Manages scope for workshop sections
+
+            Create functions for:
+            - paintToy (arrow function)
+            - assembleToy (arrow function)
+            - qualityCheck (arrow function)
+
+            Each function should:
+            - Use block-scoped variables for tracking paint colors, parts, etc.
+            - Keep track of successful vs failed toys
+            */
+        
+        const paintToy = (color) => {
+            let paintedToys = 0
+        }
+
+        const assembleToy = (parts) => {
+            let assembledToys = 0
+        }
+        
+        const qualityCheck = (check) => {
+            let checkedToys = 0
+        }
+
+
+        // Oefening 6
+        /* Create a Christmas Eve delivery route optimizer that:
+        1. Uses arrow functions for calculations
+        2. Properly scopes variables for different time zones
+
+        Features to implement:
+        - Calculate optimal route between chimneys
+        - Handle timezone changes
+        - Account for weather conditions
+        - Track reindeer energy levels
+
+        Use proper scope management for:
+        - Current timezone data
+        - Weather conditions
+        - Reindeer status
+        */
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
