@@ -21,7 +21,7 @@
         function trackToyProduction() {
             var totalToys = 100;
             if(true) {
-                // var totalToys = 50;  This is causing issues! --> var has already been declared, cannot be declared again
+                // var totalToys = 50;  This is causing issues! --> overwrites initial var
                 let dailyToys = 10;                
             }
             console.log(totalToys);  // Should print 100, not 50
@@ -33,9 +33,10 @@
         // Oefening 3
         // Write an ES6 arrow function to schedule reindeer feeding times
         // The function should take the number of reindeer and return an array of feeding times
-        const feedReindeer =  (numReindeer) => {
+        const feedReindeer =  numReindeer => {
+            const feedingTimes = [];
             for (let i = 1; i <= numReindeer; i++) {
-                console.log(`Reindeer ${i} feeding time: 8am`);
+                feedingTimes.push(`Reindeer ${i} feeding time: 8am`);
             }
         }
         feedReindeer(3);
@@ -55,29 +56,62 @@
             * Invalid gift category
         */
 
-        const niceList = ["John", "Jef", "Nick", "Sarah"];
-        const giftCategories = ["toys", "books", "clothes"];
-        const maxWeight = 25;
-        const giftList = [];
+        // const niceList = ["John", "Jef", "Nick", "Sarah"];
+        // const giftCategories = ["toys", "books", "clothes"];
+        // const maxWeight = 25;
+        // const giftList = [];
+        // const addGift = (childName, giftCat, giftWeight, giftName) => {
+        //     if (niceList.includes(childName)) {
+        //         if (giftCategories.includes(giftCat)) {
+        //             if (giftWeight <= maxWeight) {
+        //                 giftList.push({childName, giftCat, giftWeight, giftName});
+        //                 console.log(`${giftName} has been added to the gift list for ${childName}`)
+        //             }
+        //             else console.log(`${giftName} is too heavy`)
+        //         }
+        //         else console.log(`Category ${giftCat} does not exist`)
+        //     }
+        //     else console.log(`${childName} has been naughty`)
+        // }
+
+        // addGift("John", "books", 1.5, "Eragon");
+        // addGift("Nick", "toys", 26, "Train");
+        // addGift("Dorien", "books", 1.5, "Harry Potter");
+        // addGift("Sarah", "clothes", 0.8, "Shoes");
+        // console.log(giftList);
+
+        let toyGifts = [];
+        let bookGifts = [];
+        let clothesGifts = [];
+
         const addGift = (childName, giftCat, giftWeight, giftName) => {
-            if (niceList.includes(childName)) {
-                if (giftCategories.includes(giftCat)) {
-                    if (giftWeight <= maxWeight) {
-                        giftList.push({childName, giftCat, giftWeight, giftName});
-                        console.log(`${giftName} has been added to the gift list for ${childName}`)
-                    }
-                    else console.log(`${giftName} is too heavy`)
-                }
-                else console.log(`Category ${giftCat} does not exist`)
+            if (giftWeight > 25) {
+                throw new Error(`${giftName} is too heavy`);                
             }
-            else console.log(`${childName} has been naughty`)
+
+            if (!isOnNiceList) {
+                throw new Error(`${childName} has been naughty`);
+            }
+
+            switch (giftCat) {
+                case 'toy':
+                    toyGifts.push({name: childName, weight: giftWeight, gift: giftName});
+                    break
+                case 'book':
+                    bookGifts.push({name: childName, weight: giftWeight, gift: giftName});
+                    break
+                case 'clothes':
+                    clothesGifts.push({name: childName, weight: giftWeight, gift: giftName});
+                    break
+                default:
+                    throw new Error(`Category ${giftCat} does not exist`);
+                    
+            }
         }
 
-        addGift("John", "books", 1.5, "Eragon");
-        addGift("Nick", "toys", 26, "Train");
-        addGift("Dorien", "books", 1.5, "Harry Potter");
-        addGift("Sarah", "clothes", 0.8, "Shoes");
-        console.log(giftList);
+        function isOnNiceList(childName) {
+            return true;
+        }
 
 
         // Oefening 5
@@ -95,16 +129,25 @@
             - Keep track of successful vs failed toys
             */
         
-        const paintToy = (color) => {
+        const paintToy = color => {
             let paintedToys = 0
+            // paint toys with given color
+            // update paintedToys variable
+            return paintedToys;
         }
 
-        const assembleToy = (parts) => {
+        const assembleToy = parts => {
             let assembledToys = 0
+            return assembledToys;
         }
         
-        const qualityCheck = (check) => {
-            let checkedToys = 0
+        const qualityCheck = toy => {
+            if (toy.color !== 'red') {
+                throw new Error(`Toy color ${toy.color} is not approved`)
+            }
+            if (toy.parts !== 10) {
+                throw new Error(`Toy is missing parts (expected 10, got ${toy.parts.length})`)
+            }
         }
 
 
@@ -125,6 +168,15 @@
         - Reindeer status
         */
 
+        const calculateRoute = (chimneys, timezone) => {
+            let optimalRoute = [];
+            let totalDistance = 0;
+            let currentTimezone = 'UTC+1';
+
+            for (let i = 0; i < chimneys.length; i++) {
+                
+            }
+        }
         
     </script>
 </head>
