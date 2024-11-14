@@ -1,0 +1,21 @@
+.post-box {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.post-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+    align-self: center;
+}
+
+.buttons {
+    margin-left: 10px;
+    width: 10%;
+}   

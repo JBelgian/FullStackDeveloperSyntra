@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="fetch.css">
 </head>
 <body>
-    <div id="output"></div>
     
+    <h1>Fetch</h1>
+
+    <h2>New Post</h2>
+    <input type="text" id="firstName">
+    <input type="text" id="lastName">
+    <input type="number" id="avgTestGrade" min="0" max="100">
+    <button onclick="addPost()">Add Post</button>
+    <hr>
+
+    <h2>Update Post</h2>
+    <input type="text" id="newFirstName">
+    <input type="text" id="newLastName">
+    <input type="number" id="newTestGrade" min="0" max="100">
+    <hr>
+    
+    <div class="post-box" id="output"></div>
+
     <script src="fetch.js"></script>
 </body>
 </html>

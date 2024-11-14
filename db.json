@@ -1,22 +1,106 @@
 {
-    "posts": [
-      { "id": "1", "title": "Paddington", "views": 100 },
-      { "id": "2", "title": "LOTR", "views": 200 },
-      { "id": "3", "title": "Harry Potter", "views": 544 },
-      { "id": "4", "title": "Eragon", "views": 22467 },
-      { "id": "5", "title": "Home Alone", "views": 786 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "id": "1",
+      "title": "Paddington",
+      "views": 100
     },
-    "leerlingen": [
-      { "id": "1", "firstName": "Jordy", "lastName": "Hanno" },
-      { "id": "2", "firstName": "Baziel", "lastName": "Deho" },
-      { "id": "3", "firstName": "Senne", "lastName": "Dewit" },
-      { "id": "4", "firstName": "Joren", "lastName": "V" }
-    ]
-  }
+    {
+      "id": "2",
+      "title": "LOTR",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "Harry Potter",
+      "views": 544
+    },
+    {
+      "id": "4",
+      "title": "Eragon",
+      "views": 22467
+    },
+    {
+      "id": "5",
+      "title": "Home Alone",
+      "views": 786
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "leerlingen": [
+    {
+      "id": "2fa3",
+      "firstName": "Jordy",
+      "lastName": "Hanno",
+      "avgTestGrade": 95
+    },
+    {
+      "id": "a407",
+      "firstName": "Robby",
+      "lastName": "Zuiger",
+      "avgTestGrade": 90
+    },
+    {
+      "id": "2aef",
+      "firstName": "Jef",
+      "lastName": "Klak",
+      "avgTestGrade": 80
+    },
+    {
+      "firstName": "Dino",
+      "lastName": "Saurus",
+      "id": "8a20",
+      "avgTestGrade": 75
+    },
+    {
+      "id": "232f",
+      "firstName": "Heks",
+      "lastName": "Kaas",
+      "avgTestGrade": 78
+    },
+    {
+      "id": "d5c9",
+      "firstName": "Ber",
+      "lastName": "Buurman",
+      "avgTestGrade": 85
+    },
+    {
+      "id": "600c",
+      "firstName": "Ben",
+      "lastName": "Dover",
+      "avgTestGrade": 90
+    },
+    {
+      "id": "83c3",
+      "firstName": "Test",
+      "lastName": "Buddy",
+      "avgTestGrade": 100
+    },
+    {
+      "firstName": "Richard",
+      "lastName": "Harris",
+      "avgTestGrade": 51,
+      "id": "9707"
+    },
+    {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "avgTestGrade": 87,
+      "id": "e77d"
+    }
+  ]
+}
