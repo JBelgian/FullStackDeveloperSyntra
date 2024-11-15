@@ -1,41 +1,37 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Paddington",
-      "views": 100
+      "id": "2d22",
+      "title": "The Grinch",
+      "views": 7,
+      "likes": 5,
+      "timestamp": 1731672177452
     },
     {
-      "id": "2",
-      "title": "LOTR",
-      "views": 200
-    },
-    {
-      "id": "3",
-      "title": "Harry Potter",
-      "views": 544
-    },
-    {
-      "id": "4",
-      "title": "Eragon",
-      "views": 22467
-    },
-    {
-      "id": "5",
+      "id": "2fc1",
       "title": "Home Alone",
-      "views": 786
+      "views": 4,
+      "likes": 11,
+      "timestamp": 1731672187782
+    },
+    {
+      "id": "d3d9",
+      "title": "Elm Street",
+      "views": 17,
+      "likes": 8,
+      "timestamp": 1731672199267
     }
   ],
   "comments": [
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "postId": null
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "postId": null
     }
   ],
   "profile": {

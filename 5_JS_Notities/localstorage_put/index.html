@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Posts manager</h1>
+
+        <div class="input-group">
+            <input type="text" id="title" placeholder="title" required>
+            <input type="number" id="views" placeholder="vieuws" required>
+            <input type="number" id="likes" placeholder="likes" required>
+            <button id="addPostButton">Add Post</button>
+        </div>
+
+        <div class="button-group">
+            <button id="clearStorage">Clear saved posts</button>
+        </div>
+
+        <div id="output" class="output"></div>
+
+        <div id="savedPosts" class="saved-post">
+            <h2>Saved local storage posts</h2>
+        </div>
+    </div>
+
+    <script src="core.js"></script>
+</body>
+</html>
