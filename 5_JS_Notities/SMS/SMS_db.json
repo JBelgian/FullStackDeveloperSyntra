@@ -1,0 +1,55 @@
+{
+  "kids": [
+    {
+      "id": "2d22",
+      "name": "Joren V",
+      "timestamp": 1731672177452,
+      "gifts": [
+        "Book",
+        "Doll",
+        "Car"
+      ]
+    },
+    {
+      "name": "Bassy Dol",
+      "gifts": [
+        "1",
+        "3"
+      ],
+      "timestamp": 1731681483749,
+      "id": "d3d9"
+    },
+    {
+      "name": "Rafa",
+      "gifts": [
+        "2"
+      ],
+      "timestamp": 1731681230701,
+      "id": "4664"
+    },
+    {
+      "id": "a5c1",
+      "name": "Test",
+      "gifts": [
+        "Book",
+        "Doll",
+        "Car"
+      ],
+      "timestamp": 1731972383565
+    }
+  ],
+  "gifts": [
+    {
+      "id": "1",
+      "name": "Pop"
+    },
+    {
+      "id": "2",
+      "name": "Boek"
+    },
+    {
+      "id": "3",
+      "name": "Lego"
+    }
+  ]
+}

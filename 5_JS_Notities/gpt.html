@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Management System (SMS)</title>
+</head>
+<body>
+    <h1>Santa Management System (SMS)</h1>
+
+    <h2>Add a New Kid</h2>
+    <input type="text" id="kidName" placeholder="Enter kid's name">
+    <button onclick="addKid()">Add Kid</button>
+
+    <h2>Add a New Toy</h2>
+    <input type="text" id="toyName" placeholder="Enter toy name">
+    <button onclick="addToy()">Add Toy</button>
+
+    <h2>Assign Toys to Kids</h2>
+    <select id="kidsDropdown"></select>
+    <select id="toysDropdown"></select>
+    <button onclick="assignToyToKid()">Assign Toy</button>
+
+    <h2>Manage Kids and Toys</h2>
+    <button onclick="saveData()">Save to Santa's Sleighbag (Local Storage)</button>
+    <button onclick="removeKid()">Remove Kid from Database</button>
+    <div id="output"></div>
+
+    <script>
+        const API_URL = 'http://localhost:3000';
+        
+        async function fetchKids() {
+            const response = await fetch(`${API_URL}/kids`);
+            return await response.json();
+        }
+
+        async function fetchToys() {
+            const response = await fetch(`${API_URL}/toys`);
+            return await response.json();
+        }
+
+        async function addKid() {
+            const kidName = document.getElementById('kidName').value;
+            if (kidName) {
+                const response = await fetch(`${API_URL}/kids`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: kidName, toys: [] })
+                });
+                document.getElementById('kidName').value = '';
+                alert(`Added ${kidName} to the list of kids!`);
+                loadData();
+            }
+        }
+
+        async function addToy() {
+            const toyName = document.getElementById('toyName').value;
+            if (toyName) {
+                await fetch(`${API_URL}/toys`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: toyName })
+                });
+                document.getElementById('toyName').value = '';
+                alert(`Added ${toyName} to the list of toys!`);
+                loadData();
+            }
+        }
+
+        async function assignToyToKid() {
+            const kidId = document.getElementById('kidsDropdown').value;
+            const toyId = document.getElementById('toysDropdown').value;
+
+            const kid = await (await fetch(`${API_URL}/kids/${kidId}`)).json();
+            const toy = await (await fetch(`${API_URL}/toys/${toyId}`)).json();
+
+            if (kid && toy && !kid.toys.includes(toy.name)) {
+                kid.toys.push(toy.name);
+
+                await fetch(`${API_URL}/kids/${kidId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(kid)
+                });
+                
+                alert(`Assigned ${toy.name} to ${kid.name}`);
+                loadData();
+            }
+        }
+
+        async function saveData() {
+            const kids = await fetchKids();
+            localStorage.setItem('santa_kids', JSON.stringify(kids));
+            displayData();
+            alert("Data saved to Santa's Sleighbag (Local Storage)!");
+        }
+
+        async function removeKid() {
+            const kidId = document.getElementById('kidsDropdown').value;
+            await fetch(`${API_URL}/kids/${kidId}`, {
+                method: 'DELETE'
+            });
+            alert(`Removed kid with ID ${kidId} from the database.`);
+            loadData();
+        }
+
+        function displayData() {
+            const data = JSON.parse(localStorage.getItem('santa_kids')) || [];
+            document.getElementById('output').innerHTML = `
+                <h3>Kids and Assigned Toys</h3>
+                ${data.map(kid => `<p>${kid.name}: ${kid.toys.join(', ')}</p>`).join('')}
+            `;
+        }
+
+        async function loadData() {
+            const kids = await fetchKids();
+            const toys = await fetchToys();
+
+            const kidsDropdown = document.getElementById('kidsDropdown');
+            kidsDropdown.innerHTML = kids.map(kid => `<option value="${kid.id}">${kid.name}</option>`).join('');
+
+            const toysDropdown = document.getElementById('toysDropdown');
+            toysDropdown.innerHTML = toys.map(toy => `<option value="${toy.id}">${toy.name}</option>`).join('');
+            
+            displayData();
+        }
+
+        // Load initial data
+        loadData();
+    </script>
+</body>
+</html>
