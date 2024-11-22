@@ -24,7 +24,7 @@ function fetchKidsData() {
                     <span class="post-content">${kid.name} - Gifts: ${kid.gifts} </span>
                     <div class="edit-form" style="display: none;">
                         <span>${kid.name}</span>
-                        <input type="checkbox" class="bookCheck"> Book
+                        <input type="checkbox" class="bookCheck" style="padding: 10px;"> Book
                         <input type="checkbox" class="dollCheck"> Doll
                         <input type="checkbox" class="carCheck"> Car
                         <button class="smallbutton" onclick="saveEdit('${kid.id}')">Save</button>
