@@ -6,17 +6,17 @@ const students = [
     { name: "Eve", age: 19, grade: "C", major: "Biology" }
 ];
 
-let studentNames = students.map(item => item.name);
+let studentNames = students.map(student => student.name);
 console.log(studentNames);
 
-let gradeAStudent = students.filter(item => item.grade === "A");
+let gradeAStudent = students.filter(student => student.grade === "A");
 console.log(gradeAStudent);
 
-let avgAge = students.reduce((total, item) =>
-    total + item.age, 0) / students.length;
+let avgAge = students.reduce((total, student) =>
+    total + student.age, 0) / students.length;
 console.log(avgAge);
 
-let studentNamesUpper = studentNames.map(item => item.toUpperCase());
+let studentNamesUpper = studentNames.map(student => student.toUpperCase());
 console.log(studentNamesUpper);
 
 function youngestStudent() {
