@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/results'
+const url = 'https://randomuser.me/api/?results=5'
 
 async function fetchData() {
     try {
