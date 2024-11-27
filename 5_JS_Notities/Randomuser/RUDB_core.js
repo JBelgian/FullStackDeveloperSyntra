@@ -1,6 +1,6 @@
 async function generateContent() {
     try {
-      const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAuJf3t74Qx2tdH-iZgD0Bf6ePy8JGWW_k", {
+      const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
