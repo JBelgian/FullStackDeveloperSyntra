@@ -1,13 +1,31 @@
-const url = 'https://randomuser.me/api/?results=5'
-
-async function fetchData() {
+async function generateContent() {
     try {
-        let response = await fetch(url);
-        let data = await response.json();
-        console.log(data);
+      const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAuJf3t74Qx2tdH-iZgD0Bf6ePy8JGWW_k", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [
+                {
+                  text: "Explain how AI works"
+                }
+              ]
+            }
+          ]
+        })
+      });
+  
+      const data = await response.json();
+      console.log(data);
+      return JSON.stringify(data);
     } catch (error) {
-        console.error('Error fetching data:', error);
+      console.error("Error:", error);
     }
-}
-
-fetchData();
+  }
+  
+  // Call the function
+  generateContent();
+  
