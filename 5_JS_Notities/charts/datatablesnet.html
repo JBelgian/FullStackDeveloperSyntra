@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataTables Example</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+
+  <h1>DataTables.net + ApexCharts Example</h1>
+
+  <div id="chart"></div>
+
+  <table id="example" class="display" style="width:80%">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Country</th>
+        <th>Computing power</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;">1</td>
+        <td style="text-align: center;">USA</td>
+        <td>6475559</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Japan</td>
+        <td>940710</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Italy</td>
+        <td>837788</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Switzerland</td>
+        <td>473517</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Germany</td>
+        <td>405341</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>China</td>
+        <td>391388</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    $(document).ready(function() {
+      $('#example').DataTable();
+    });
+
+    var options = {
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      series: [{
+        name: 'Computing power',
+        data: [6475559, 940710, 837788, 473517, 405341, 391388]
+      }],
+      xaxis: {
+        categories: ['US', 'Japan', 'Italy', 'Switzerland', 'Germany', 'China']
+      },
+      title: {
+        text: 'Computing power per country data',
+        align: 'center'
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+
+</body>
+</html>

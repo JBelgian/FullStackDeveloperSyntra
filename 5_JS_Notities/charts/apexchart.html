@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexCharts Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+  <h1>ApexCharts Chart Example</h1>
+  
+  <div id="chart"></div>
+
+  <script>
+    var options = {
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      series: [{
+        name: 'Computing power',
+        data: [6475559, 940710, 837788, 473517, 405341, 391388]
+      }],
+      xaxis: {
+        categories: ['US', 'Japan', 'Italy', 'Switzerland', 'Germany', 'China']
+      },
+      title: {
+        text: 'Computing power per country data',
+        align: 'center'
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+  </script>
+</body>
+</html>
