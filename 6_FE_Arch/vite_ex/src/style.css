@@ -1,0 +1,40 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b80000, #810000, #000000);
+  padding: 2rem;
+  color: #fff;
+}
+
+.post-item {
+  background: rgba(216, 19, 19, 0.534);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateX(5px);
+  background: rgba(9, 214, 9, 0.63);
+}
+
+.content {
+flex: 1;
+}
+
+.item {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
