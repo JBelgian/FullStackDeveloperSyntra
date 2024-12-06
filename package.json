@@ -2,7 +2,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "json-server": "^1.0.0-beta.3",
     "lodash": "^4.17.21",
     "mysql2": "^3.11.5"
