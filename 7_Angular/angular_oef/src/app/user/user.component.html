@@ -1,0 +1,6 @@
+@for (user of users; track user.id) {
+    @if (user.age > 30) {
+        <p style="color: red;">{{ user.name}} is {{ user.age}} years old, retire!</p>
+    } @else {
+        <p>{{ user.name}} is {{ user.age}} years old, is fit for duty</p>}
+  }

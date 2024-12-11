@@ -226,7 +226,13 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
+      @if (xmas) {
+        <p>🎄 Merry Christmas! 🎄</p>
+      } @else {
+        <p>Just another day</p>
+      }
       <p>Congratulations! Your app is running. 🎉</p>
+      <p><app-user/></p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

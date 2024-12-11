@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from "./user/user.component";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,5 @@ import { UserComponent } from './user/user.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Jordy';
-  xmas: boolean = false;
+  title = 'Jordy Oefening';
 }
