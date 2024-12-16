@@ -1,0 +1,77 @@
+<div class="task-manager">
+  <!-- Two-way data binding example with ngModel -->
+  <div class="task-input">
+    <input 
+      [(ngModel)]="newTaskTitle" 
+      placeholder="Enter new task"
+      (keyup.enter)="addTask()"
+    >
+    
+    <select [(ngModel)]="selectedPriority">
+      <option value="low">Low Priority</option>
+      <option value="medium">Medium Priority</option>
+      <option value="high">High Priority</option>
+    </select>
+
+    <select [(ngModel)]="selectedCategory">
+      <option value="work">Work</option>
+      <option value="personal">Personal</option>
+      <option value="shopping">Shopping</option>
+      <option value="health">Health</option>
+    </select>
+
+    <input 
+      type="date"
+      [(ngModel)]="selectedDueDate"
+    >
+
+    <button (click)="addTask()">Add Task</button>
+  </div>
+
+  <!-- Using @if with @else -->
+  @if (tasks.length > 0) {
+    <div class="task-list">
+      <!-- Using @for with tracking -->
+      @for (task of tasks; track task.id) {
+        <div 
+          class="task-item"
+          [class.completed]="task.completed"
+          [class.overdue]="isOverdue(task.dueDate)"
+        >
+          <!-- Event binding example -->
+          <input 
+            type="checkbox"
+            [checked]="task.completed"
+            (change)="toggleTask(task)"
+          >
+          
+          <!-- Property binding and interpolation examples -->
+          <span>
+            {{ task.title }}
+          </span>
+          
+          <span class="priority-badge" [class]="task.priority">
+            {{ task.priority }}
+          </span>
+
+          <span class="category-badge" [class]="task.category">
+            {{ task.category }}
+          </span>
+
+          <span>
+            Due: {{ task.dueDate | date: 'dd/MM/yyyy' }}
+          </span>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="empty-state">
+      No tasks available. Add some tasks to get started!
+    </div>
+  }
+
+  <!-- Interpolation with expression -->
+  <div class="task-summary">
+    Remaining tasks: {{ incompleteTasks }}
+  </div>
+</div>

@@ -1,0 +1,73 @@
+.task-manager {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .overdue {
+    color: red;
+  }
+  
+  .priority-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+  
+  .priority-badge.high {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .priority-badge.medium {
+    background-color: #fff3e0;
+    color: #ef6c00;
+  }
+  
+  .priority-badge.low {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+
+  .category-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    background-color: rgb(115, 240, 188);
+    font-weight: bold;
+  }
+
+  .category-badge.work {
+    color: red
+  }
+  
+  .category-badge.personal {
+    color: purple
+  }
+  
+  .category-badge.shopping {
+    color: blue
+  }
+
+  .category-badge.health {
+    color: green
+  }
