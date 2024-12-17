@@ -7,17 +7,18 @@ export class UsersService {
 
   constructor() { }
 
-  users = [
-    { id:1, name: "John Smith", age: 25 },
-    { id:2, name: "Terry Finch", age: 34 }
-  ]
+  url = 'http://localhost:3000/users';
 
-  getUsers() {
-    return this.users;
+  getUsers(): Promise<any> {
+    return fetch(this.url)
+      .then(res => res.json())
+      .catch(e => console.log(e));
   }
 
-  getUserbyId(id: number) {
-    return this.users.find(user => user.id === id);
+  getUserById(id: number): Promise<any> {
+    return fetch(`${this.url}/${id}`)
+      .then(res => res.json())
+      .catch(e => console.log(e));
   }
 }
 
