@@ -1,0 +1,6 @@
+2025-02-10 11:44:33,14,Jack,Soda
+2025-02-10 11:45:05,20,Hooligan,Liquor & beer
+2025-02-10 11:52:06,88,Tino,Liquor & beer
+2025-02-10 12:20:17,25,Charles,Liquor & beer
+2025-02-10 12:23:42,28,Charlie,Liquor & beer
+2025-02-10 12:24:46,6,Max,Soda
