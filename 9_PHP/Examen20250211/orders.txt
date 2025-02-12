@@ -1,0 +1,10 @@
+Pizza,2,20
+Hamburger,4,60
+Sushi,1,20
+Hamburger,2,34
+Spaghetti,1,15
+Sushi,1,24
+Spaghetti,2,26
+Lasagne,1,19
+Spaghetti,2,26
+Lasagne,1,19
