@@ -46,7 +46,7 @@ function addUser($name, $email, $password)
 {
   global $conn;
   $hashedPassword = hashPassword($password);
-  $query = "insert into ` users` (`name`, `email`, `password`, `status`, `date`) values ('$name', '$email', '$hashedPassword', 1, NOW())";
+  $query = "INSERT INTO `users` (`name`, `email`, `password`, `status`, `date`) VALUES ('$name', '$email', '$hashedPassword', 1, NOW())";
   $results = mysqli_query($conn, $query);
 }
 ?>

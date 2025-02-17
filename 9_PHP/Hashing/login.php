@@ -21,12 +21,12 @@ if (isset($_POST['email'], $_POST['password'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     if (emailExists($email)) {
-        $query = "select `password` from `users` where `email` = '$email'";
+        $query = "SELECT * FROM `users` WHERE `email` = '$email'";
         $results = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($results);
         if (password_verify($password, $row['password'])) {
             $_SESSION['name'] = $row['name'];
-            $_SESSION['token'] = bin2hex(random_bytes(5));
+            $_SESSION['token'] = bin2hex(random_bytes(32));
             header('location: dashboard.php');
             exit;
         } else {
