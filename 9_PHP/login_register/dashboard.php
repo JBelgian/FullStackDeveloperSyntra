@@ -1,6 +1,7 @@
 <?php
 include 'assets/common.php';
 include 'assets/header.php';
+include 'pdfFile.php';
 checkLogin();
 
 // Handle Delete Action
@@ -31,10 +32,20 @@ if (isset($_POST['create'])) {
     header("Location: dashboard.php?msg=created");
     exit();
 }
+
+// Handle print Action
+if (isset($_GET['print'])) {
+    $id = $_GET['print'];
+    ob_clean();
+    $user = getUser($id);
+    printToPDF($user);
+    exit();
+}
 ?>
 
 <div class="container mt-5">
     <div class="row">
+        <div class="col-12">
         <div class="col-12">
             <h1 class="text-center mb-4">User Management</h1>
             <?php if (isset($_GET['msg'])): ?>
@@ -133,6 +144,7 @@ if (isset($_POST['create'])) {
                                         <!-- $GET Superglobal alert: -->
                                         <a href="?edit=<?php echo $row['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
                                         <a href="?delete=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                                        <a href="?print=<?php echo $row['id']; ?>" class="btn btn-sm btn-info">Print</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
