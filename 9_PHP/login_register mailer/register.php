@@ -1,5 +1,6 @@
 <?php
 include 'assets/common.php';
+include 'registrationMail.php';
 
 // get name, email and password from form using $_POST
 // if i do not use a prepared statement, i need to sanitize the input
@@ -21,6 +22,7 @@ $sql = "INSERT INTO users (name, email, password, status, date)
         VALUES ('$name', '$email', '$hashedPassword', 1, NOW())";
 
 if(mysqli_query($conn, $sql)) {
+    sendMail($name, $email);
     header("Location: index.php?success=1");
     exit(); // ensure no further code is executed after redirect
 } else {

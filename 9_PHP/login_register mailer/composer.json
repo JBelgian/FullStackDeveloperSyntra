@@ -1,6 +1,7 @@
 {
     "require": {
         "dompdf/dompdf": "^3.1",
-        "phpmailer/phpmailer": "^6.9"
+        "phpmailer/phpmailer": "^6.9",
+        "psr/log": "^3.0"
     }
 }
